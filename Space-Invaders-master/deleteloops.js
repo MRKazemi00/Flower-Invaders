@@ -1,4 +1,4 @@
-//deletes array member when toDelete is true
+//raderar arrayerna när toDelete är sann
 function deleteLoops(flowers,drops) {
   for (var i = flowers.length-1; i >= 0; i--) {
     if(flowers[i].toDelete === true){

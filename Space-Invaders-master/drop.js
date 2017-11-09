@@ -4,20 +4,20 @@ function Drop(x, y) {
   this.r= 8;
   this.toDelete = false;
 
-//Show function
+//Visa "Drops" (Skotten som kommer från fartyget)
   this.show = function(){
       noStroke();
       fill(150, 0, 255);
       ellipse(this.x, this.y, this.r*2, this.r*2);
     }
 
-//Evaporate drop
+//Evaporerar dropsen genom att göra toDelete sann
     this.gone = function(){
       this.toDelete = true;
 
     }
 
-//hit function
+//En funktion så att den upptäcker när den träffar blommorna
     this.hits = function(flower){
 
       var d= dist(this.x, this.y, flower.x, flower.y);
@@ -29,7 +29,7 @@ function Drop(x, y) {
       }
 
     }
-//Move Function
+//rörelsefunktionen för drops
     this.move = function(){
     this.y = this.y-4;
     }
